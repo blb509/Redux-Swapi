@@ -22,7 +22,7 @@ export const getChar = () => dispatch => {
     })
     .catch(err => {
       dispatch({ type: FAILURE,
-                 payload: err
+                 payload: err.message
       });
     });
 };
