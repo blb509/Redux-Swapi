@@ -18,7 +18,7 @@ export const getChar = () => dispatch => {
     .get('https://swapi.co/api/people')
     .then(res => {
       dispatch({ type: SUCCESS,
-                 payload: res.data });
+                 payload: res.data.results });
     })
     .catch(err => {
       dispatch({ type: FAILURE,
